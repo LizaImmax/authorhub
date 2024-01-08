@@ -1,0 +1,63 @@
+<!-- templates/layout.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>{% block title %}Elizabeth's Magical Haven{% endblock %}</title>
+    <style>
+        body {
+            background-color: #f8f8f8; /* Soft background color */
+            color: #333; /* Default text color */
+            font-family: 'Arial', sans-serif; /* Default font */
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #fff; /* Header background color */
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft box shadow */
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #fff; /* Footer background color */
+            padding: 10px;
+            text-align: center;
+            margin-top: 20px;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); /* Soft box shadow */
+        }
+    </style>
+    {% block additional_styles %}{% endblock %}
+</head>
+<body>
+    <header>
+        <h1>{% block header %}Author's Magical Haven{% endblock %}</h1>
+        <!-- Add any common navigation links or elements here -->
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>Connect with me:</p>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+            <a href="#">LinkedIn</a>
+        </div>
+        <div class="footer-content">
+            <p>&copy; 2022 Elizabeth's Magical Haven. All rights reserved.</p>
+            <a href="{{ url_for('terms_of_service') }}">Terms of Service</a>
+            <a href="{{ url_for('privacy_policy') }}">Privacy Policy</a>
+        </div>
+    </footer>
+</body>
+</html>

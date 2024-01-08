@@ -1,0 +1,17 @@
+<!-- templates/blog.html -->
+{% extends 'layout.html' %}
+
+{% block title %}The Blog Chronicles{% endblock %}
+
+{% block content %}
+    <section>
+        <h2>The Blog Chronicles</h2>
+        <div class="blog-entry">
+            <h3>The Quill's Dance</h3>
+            <p>Publication Date: January 1, 2023</p>
+            <p>Once upon a midnight whimsy, the quill decided to dance. Join me in this poetic journey where words waltz, sentences tango, and paragraphs pirouette. Uncover the secrets of the quill's midnight ball!</p>
+            <a href="{{ url_for('full_blog_post', post_id=1) }}">Read More</a>
+        </div>
+        <!-- Add more enchanting blog entries -->
+    </section>
+{% endblock %}

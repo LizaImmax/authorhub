@@ -1,0 +1,18 @@
+<!-- templates/books.html -->
+{% extends 'layout.html' %}
+
+{% block title %}Bookshelf of Wonders{% endblock %}
+
+{% block content %}
+    <section>
+        <h2>Welcome to the Book Carnival!</h2>
+        <p>Step right up and explore the magical wonders on my bookshelf. Each book is a ticket to a different world, a rollercoaster of emotions, and a front-row seat to the spectacle of storytelling!</p>
+        <div class="book-entry">
+            <img src="book_cover.jpg" alt="Book Cover">
+            <h3>The Mysterious Misadventures</h3>
+            <p>Join the quirky detective duo as they navigate through a world of laughter, puzzles, and unexpected friendships.</p>
+            <a href="{{ url_for('book_detail', book_id=1) }}">Discover More</a>
+        </div>
+        <!-- Add more whimsical book entries -->
+    </section>
+{% endblock %}

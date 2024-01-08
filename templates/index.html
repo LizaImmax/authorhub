@@ -1,0 +1,79 @@
+<!-- templates/index.html -->
+{% extends 'layout.html' %}
+
+{% block title %}Welcome to Elizabeth's Magical Haven{% endblock %}
+
+{% block header %}Elizabeth's Magical Haven{% endblock %}
+
+{% block additional_styles %}
+    <style>
+        body {
+            background: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+            /* Blended color background */
+        }
+
+        .dashboard {
+            background-color: #3f5efb; /* Brightly colored dashboard background */
+            color: #fff; /* Text color on the dashboard */
+            padding: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Soft box shadow */
+            position: fixed;
+            height: 100%;
+            overflow: auto;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin-bottom: 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            font-size: 16px;
+            display: block;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #34495e; /* Darker background on hover */
+        }
+
+        .main-content {
+            margin-left: 250px; /* Adjust the margin based on the dashboard width */
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+    <div class="dashboard">
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('about') }}">About</a></li>
+                <li><a href="{{ url_for('books') }}">Books</a></li>
+                <li><a href="{{ url_for('blog') }}">Blog</a></li>
+                <li><a href="{{ url_for('shop') }}">Shop</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                <li><a href="{{ url_for('testimonials') }}">Testimonials</a></li>
+                <li><a href="{{ url_for('bookclub') }}">Book Club</a></li>
+                <li><a href="{{ url_for('privacy_policy') }}">Privacy Policy</a></li>
+                <li><a href="{{ url_for('terms_of_service') }}">Terms of Service</a></li>
+                <li><a href="{{ url_for('events') }}">Events</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <section class="main-content">
+        <h2>Welcome to My Magical Literary World</h2>
+        <p>Explore the magic of words, stories, and imagination. Join me on a journey through the realms of literature.</p>
+        <!-- Add additional content specific to the home page -->
+    </section>
+{% endblock %}
