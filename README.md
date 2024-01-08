@@ -63,7 +63,7 @@ Run the Flask application:
 bash
 Copy code
 python app.py
-Open your web browser and navigate to http://localhost:5000/ to experience [Your Author Name]'s Literary Haven.
+Open your web browser and navigate to http://localhost:5000/ to experience Elizabeth Muthoni's Literary Haven.
 
 // Project Structure//
 
